@@ -43,7 +43,18 @@ if(rs.next())
 		response.sendRedirect("RegA.html");
 		
 	}
-	
+	if(rs.getString(2).equals(pwd)&&username.equals("avd"))
+	{
+		response.sendRedirect("Avdelning.html");
+	}
+	if(rs.getString(2).equals(pwd)&&username.equals("sköterska"))
+	{
+		response.sendRedirect("Nurse.html");
+	}
+	if(rs.getString(2).equals(pwd)&&username.equals("reception"))
+	{
+		response.sendRedirect("Reception.html");
+	}
 	else
 	{
 		out.println("invalid");
